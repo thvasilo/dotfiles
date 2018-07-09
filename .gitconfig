@@ -1,0 +1,25 @@
+[core]
+	autocrlf = input
+	safecrlf = true
+	editor = emacs
+[branch]
+	autosetuprebase = always
+[push]
+	default = simple
+[alias]
+    s = status
+    cm = commit
+    br = branch
+    co = checkout
+    df = diff
+    dh =  diff HEAD
+    dl = diff HEAD^ HEAD
+    fetched = log ORIG_HEAD.. --stat --no-merges
+    logp = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+    new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
+    last = log --name-status HEAD^..HEAD
+[pull]
+	rebase = true
+[user]
+	name = Theodore Vasiloudis
+	email = tvas@kth.se
